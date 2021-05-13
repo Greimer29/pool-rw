@@ -1,0 +1,28 @@
+{
+    "Personas": [{
+            "id": 28086003,
+            "name": "Greimer",
+            "apellido": "Pérez",
+            "tickets": 100,
+            "wallet": "",
+            "pozo": 0,
+            "pools": [],
+            "boleto": ""
+        },
+        {
+            "id": 28086005,
+            "name": "Kenyer",
+            "apellido": "Pérez",
+            "tickets": 100,
+            "wallet": "",
+            "pozo": 0,
+            "pools": [],
+            "boleto": ""
+        }
+    ],
+    "Pool": {
+        "id": 456456,
+        "pozo": 0,
+        "personas": []
+    }
+}

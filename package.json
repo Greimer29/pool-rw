@@ -1,0 +1,48 @@
+{
+    "name": "pool-rw",
+    "version": "1.0.0",
+    "description": "Web service for the community of RemesWorld extended by Pooltogether",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/index.js",
+        "webpack": "webpack --mode development --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Greimer29/pool-rw.git"
+    },
+    "author": "GreimerKmon",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Greimer29/pool-rw/issues"
+    },
+    "homepage": "https://github.com/Greimer29/pool-rw#readme",
+    "dependencies": {
+        "bootstrap": "^5.0.0-beta3",
+        "express": "^4.17.1",
+        "mongoose": "^5.12.8",
+        "morgan": "^1.10.0",
+        "node-sass": "^6.0.0",
+        "react-icons": "^4.2.0",
+        "react-router-dom": "^5.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.2",
+        "@babel/preset-env": "^7.14.2",
+        "@babel/preset-react": "^7.13.13",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.2.2",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^5.2.4",
+        "file-loader": "^6.2.0",
+        "nodemon": "^2.0.7",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "sass-loader": "^11.1.0",
+        "style-loader": "^2.0.0",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.37.0",
+        "webpack-cli": "^4.7.0"
+    }
+}
