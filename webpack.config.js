@@ -5,8 +5,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 use: 'babel-loader',
                 test: /\.js$/,
                 exclude: /node_modules/
@@ -14,16 +13,17 @@ module.exports = {
             {
                 test: [/\.css$/, /\.scss$/],
                 use: [
-                  'style-loader',
-                  'css-loader',
-                  'sass-loader'
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
             {
-                test:/\.png$/, 
-                use:[
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                use: [
                     'url-loader?limit=8192&name=./[name].[ext]',
-                    'file-loader'
+                    'file-loader',
+                    'url-loader'
                 ]
             }
         ]
