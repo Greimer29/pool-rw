@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react'
 import './pool.scss';
 import {Personas} from '../db.json';
+import DAI from './logo-DAI.png';
 
 class Pool extends Component{
     constructor(){
@@ -10,6 +11,7 @@ class Pool extends Component{
             Personas
         }
         this.Ver = this.Ver.bind(this);
+        this.Tick = this.Tick.bind(this);
     }
 
     Ver(e){
@@ -21,6 +23,19 @@ class Pool extends Component{
         }
     }
 
+    // Tick(){ Esto es solo unaaaaaa PRUEBAAAAAAAA
+    //    const time = new Date();
+
+    //    const hour = time.getHours();
+    //    const min = time.getMinutes();
+    //    const sec = time.getSeconds();
+
+    //    const timer = `${hour}:${min}:${sec}`;
+    //     console.log(timer);
+
+    //    setTimeout(this.Tick,1000);
+    // }
+
 
     render(){
         const Person = this.state.Personas.map((persona,i) => {
@@ -31,10 +46,14 @@ class Pool extends Component{
             )
         })
         return(
-            <div className="pool">
-                <div className="pool-clock"><h3>Timer</h3></div>
+            <div name="Pool" className="pool">
+                <div name="Pool_clock"className="pool-clock">
+                    <h3 name="clock" >Timer
+                    </h3>
+                </div>
                     <div className="pool-container">
                         <div className="pool-img">
+                            <img src={DAI} alt="jsakdfjsdkfj"/>
                         </div>
                         <div className="publicidad">
                             <p className="my-2">
@@ -45,12 +64,10 @@ class Pool extends Component{
                     <button className="btn btn-warning bg-gradient my-2 w-100" onClick={this.timer}>Participar</button>
                         <a href="/como" className="link my-2">Cómo Funciona</a>
                     <div className="pool-pozo btn w-100" onClick={this.Ver}>
-                        <div className="container">
                             Personas que entraron
                             <div id="aja" className="container hide">
                                 {Person}
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Sidebar />
         <Pool/>
-        <Ticket/>
+        {/* <Ticket/> */}
       </Router>
     </div>
   );
