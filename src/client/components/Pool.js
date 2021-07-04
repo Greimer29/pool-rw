@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react'
 import './pool.scss';
 import {Personas} from '../db.json';
-import DAI from './logo-DAI.png';
+import DAI from '../images/logo-DAI.png';
 
 class Pool extends Component{
     constructor(){
@@ -11,7 +10,7 @@ class Pool extends Component{
             Personas
         }
         this.Ver = this.Ver.bind(this);
-        this.Tick = this.Tick.bind(this);
+        // this.Tick = this.Tick.bind(this);
     }
 
     Ver(e){
