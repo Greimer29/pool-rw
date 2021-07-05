@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './pool.scss';
+// import './pool.scss';
 import {Personas} from '../db.json';
 import DAI from '../images/logo-DAI.png';
 
