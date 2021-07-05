@@ -10,7 +10,7 @@ class Pool extends Component{
             Personas
         }
         this.Ver = this.Ver.bind(this);
-        // this.Tick = this.Tick.bind(this);
+        this.Tick = this.Tick.bind(this);
     }
 
     Ver(e){
@@ -22,51 +22,61 @@ class Pool extends Component{
         }
     }
 
-    // Tick(){ Esto es solo unaaaaaa PRUEBAAAAAAAA
-    //    const time = new Date();
+    componentDidMount(){
+        this.Tick();
+    }
 
-    //    const hour = time.getHours();
-    //    const min = time.getMinutes();
-    //    const sec = time.getSeconds();
+    Tick(){ //Esto es solo unaaaaaa PRUEBAAAAAAAA
+       const time = new Date();
 
-    //    const timer = `${hour}:${min}:${sec}`;
-    //     console.log(timer);
+       const hour = time.getHours();
+       const min = time.getMinutes();
+       const sec = time.getSeconds();
 
-    //    setTimeout(this.Tick,1000);
-    // }
+       const timer = `${hour}:${min}:${sec}`;
+        // console.log(timer);
 
+        document.getElementById('Clock').innerHTML = timer;
+
+        setTimeout(this.Tick,1000)
+    }
 
     render(){
         const Person = this.state.Personas.map((persona,i) => {
             return(
-                <div className="container  pool-pozo" key={i}>
+                <div className="pool-pozo" key={i}>
                     <h4>{persona.name}</h4>
                 </div>
             )
         })
         return(
-            <div name="Pool" className="pool">
-                <div name="Pool_clock"className="pool-clock">
-                    <h3 name="clock" >Timer
-                    </h3>
-                </div>
-                    <div className="pool-container">
-                        <div className="pool-img">
-                            <img src={DAI} alt="jsakdfjsdkfj"/>
-                        </div>
-                        <div className="publicidad">
-                            <p className="my-2">
-                                Participa y compite por un premio de hasta:
-                            </p>
-                            <h1 className="premio my-0">1.000 <span className="dai"></span></h1>
-                        </div>
-                    <button className="btn btn-warning bg-gradient my-2 w-100" onClick={this.timer}>Participar</button>
-                        <a href="/como" className="link my-2">Cómo Funciona</a>
+            <div className="pool">
+                <h2 id="Clock">   
+                    Timer
+                </h2>
+                <div className="pool-container">
+                    <div className="pool-img">
+                        <img src={DAI} alt="jsakdfjsdkfj"/>
+                    </div>
+                    <div className="publicidad">
+                        <p className="my-2">
+                            Participa y compite por un premio de hasta:
+                        </p>
+                        <h1 className="premio my-0">
+                            1.000<span className="dai"></span>
+                        </h1>
+                    </div>
+                    <button className="btn btn-warning bg-gradient my-2 w-100" onClick={this.Tick}>
+                        Participar
+                    </button>
+                    <a href="/como" className="link my-2">
+                        Cómo Funciona
+                    </a>
                     <div className="pool-pozo btn w-100" onClick={this.Ver}>
-                            Personas que entraron
-                            <div id="aja" className="container hide">
-                                {Person}
-                            </div>
+                        Personas que entraron
+                        <div id="aja" className="container hide">
+                            {Person}
+                        </div>
                     </div>
                 </div>
             </div>
