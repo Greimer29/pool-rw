@@ -5,7 +5,7 @@
             "apellido": "Pérez",
             "tickets": 100,
             "wallet": "",
-            "pozo": 0,
+            "pozo": 50,
             "pools": [],
             "boleto": ""
         },
@@ -15,7 +15,17 @@
             "apellido": "Pérez",
             "tickets": 100,
             "wallet": "",
-            "pozo": 0,
+            "pozo": 20,
+            "pools": [],
+            "boleto": ""
+        },
+        {
+            "id": 10934709,
+            "name": "Tobias",
+            "apellido": "Pérez",
+            "tickets": 250,
+            "wallet": "",
+            "pozo": 50,
             "pools": [],
             "boleto": ""
         }
