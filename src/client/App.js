@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
 import Pool from './components/Pool';
+import Tickets from './components/Tickets'
 import {Personas} from './db.json';
 
 import './index.scss';
@@ -75,6 +76,7 @@ class App extends Component {
                     </div>
                 </IconContext.Provider>
                 <div className="container">
+                    <Route path="/tickets" exact={true} component={Tickets}/>
                     <Pool/>
                 </div>
             </div>
